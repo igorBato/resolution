@@ -11,6 +11,7 @@
 .header-wrapper-boxed {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header-navigation {
@@ -25,14 +26,29 @@
 
     li {
       margin-left: 90px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      letter-spacing: 1px;
+
+      @media (max-width: 768px) {
+        margin-left: 24px;
+      }
     }
 
     li a {
       text-decoration: none;
+      color: $MainWhite;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 90px;
+      text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $MainBlack;
+        letter-spacing: 1px;
+      }
     }
   }
 }
@@ -40,4 +56,13 @@
 .logo-wrapper {
   max-width: 215px;
   max-height: 33px;
+
+  @media (max-width: 768px) {
+    max-width: 111px;
+    max-height: 17px;
+  }
+
+  .header-logotip {
+    width: 100%;
+  }
 }

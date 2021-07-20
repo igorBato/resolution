@@ -7,3 +7,30 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.lines-fullwidth {
+  position: relative;
+  padding: 0;
+}
+
+.lines-fullwidth::after {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  right: 1px;
+  bottom: 0;
+  background-image: repeating-linear-gradient(to right, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent);
+  background-size: 20% 100%;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    background-image: repeating-linear-gradient(to right, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent);
+    background-size: 49.9% 100%;
+  }
+}
