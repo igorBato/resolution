@@ -1,0 +1,45 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+.hero-section {
+  width: 100%;
+  background-color: $DarkGreen;
+  position: relative;
+
+  .black-plate {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $MainBlack;
+    z-index: 0;
+  }
+}
+
+.site-wrapper-boxed {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 900px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 128px;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+
+  .hero-title-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 128px;
+    right: 0;
+    z-index: 100;
+  }
+}

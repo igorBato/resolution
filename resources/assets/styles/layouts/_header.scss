@@ -1,2 +1,43 @@
 // TODO: .banner .nav li {}
 // TODO: .banner .nav a {}
+.header-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-wrapper-boxed {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+    list-style-type: none;
+
+    li {
+      margin-left: 90px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    li a {
+      text-decoration: none;
+    }
+  }
+}
+
+.logo-wrapper {
+  max-width: 215px;
+  max-height: 33px;
+}
