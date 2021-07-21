@@ -1,0 +1,111 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+.what-section {
+  width: 100%;
+  padding-top: 242px;
+  padding-bottom: 172px;
+  background-color: $MainGreen2;
+  position: relative;
+
+  .what-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .what-title-wrapper {
+      max-width: 515px;
+
+      .what-title {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 82px;
+        line-height: 88px;
+        letter-spacing: 1.01786px;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 52px;
+          line-height: 60px;
+        }
+      }
+    }
+
+    .what-text-wrapper {
+      max-width: 664px;
+      padding-top: 144px;
+      padding-bottom: 135px;
+      padding-left: 12px;
+
+      @media (max-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 11px;
+        padding-left: 0;
+      }
+
+      .what_text {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .square-dots {
+      width: 176px;
+      height: 176px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 110;
+
+      @media (max-width: 768px) {
+        bottom: -259px;
+      }
+
+      .square-dots-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .square-dot {
+          width: 7px;
+          height: 7px;
+        }
+
+        .orange-dot {
+          background-color: $MainOrange;
+        }
+
+        .green-dot {
+          background-color: $MainGreen2;
+        }
+
+        .grey-dot {
+          background-color: $Grey1;
+        }
+
+        .black-dot {
+          background-color: $MainBlack;
+        }
+      }
+    }
+  }
+}

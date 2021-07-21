@@ -25,7 +25,7 @@ body {
   right: 1px;
   bottom: 0;
   background-image: repeating-linear-gradient(to right, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent);
-  background-size: 20% 100%;
+  background-size: 19.9% 100%;
 
   @media (max-width: 768px) {
     width: calc(100% - 30px);
@@ -33,4 +33,14 @@ body {
     background-image: repeating-linear-gradient(to right, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent);
     background-size: 49.9% 100%;
   }
+}
+
+.site-wrapper-boxed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.orange-text {
+  color: $MainOrange;
 }

@@ -6,5 +6,6 @@
 
 @section('content')
   @include('partials.hero')
+  @include('partials.what')
   main - HOME
 @endsection
