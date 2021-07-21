@@ -152,8 +152,9 @@
       right: -15px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 390px) {
       width: calc(100% + 15px);
+      height: auto;
     }
 
     .hero-image {

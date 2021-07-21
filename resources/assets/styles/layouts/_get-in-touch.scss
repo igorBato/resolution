@@ -1,0 +1,83 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+.get-in-touch-section {
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: $MainGreen2;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+
+  .get-in-touch-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .get-in-touch-title-wrapper {
+      max-width: 600px;
+
+      .get-in-touch-title {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 58px;
+        letter-spacing: 1.23642px;
+        margin: 0;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+          line-height: 42px;
+          text-align: center;
+        }
+      }
+    }
+
+    .get-in-touch-button-wrapper {
+      max-width: 600px;
+      min-width: 304.7px;
+
+      @media (max-width: 768px) {
+        padding-top: 60px;
+        padding-left: 0;
+        width: 100%;
+      }
+
+      .get_in_touch_button {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 80px;
+        letter-spacing: 1px;
+        background-color: $MainBlack;
+        color: $MainWhite;
+        padding: 8px 74px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 30px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
