@@ -9,6 +9,11 @@
   z-index: 110;
   padding-top: 200px;
   height: 897px;
+
+  .slick-track {
+    display: flex !important;
+    align-items: center;
+  }
 }
 
 .custom-slide {
@@ -122,9 +127,4 @@ $tertiary-color: #000;
   100% {
     font-size: 16px;
   }
-}
-
-.slick-track {
-  display: flex !important;
-  align-items: center;
 }

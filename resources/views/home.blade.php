@@ -10,5 +10,8 @@
   @include('partials.slider-one')
   @include('partials.get-in-touch')
   @include('partials.who-we-are')
-  main - HOME
+  @include('partials.slider-twoo')
+  @include('partials.become-a-part')
+  slider-three
+  @include('partials.logotips')
 @endsection
