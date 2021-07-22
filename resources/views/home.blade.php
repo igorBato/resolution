@@ -9,5 +9,6 @@
   @include('partials.what')
   @include('partials.slider-one')
   @include('partials.get-in-touch')
+  @include('partials.who-we-are')
   main - HOME
 @endsection

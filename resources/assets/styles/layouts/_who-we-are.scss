@@ -1,0 +1,125 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+.who-we-are-section {
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 376px;
+  background-color: $MainWhite;
+  position: relative;
+
+  .who-we-are-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .who-we-are-title-wrapper {
+      max-width: 492px;
+
+      .who-we-are-title {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 82px;
+        line-height: 88px;
+        letter-spacing: 1.01786px;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 52px;
+          line-height: 60px;
+        }
+      }
+    }
+
+    .who-we-are-text-wrapper {
+      max-width: 471px;
+      padding-top: 70px;
+
+      @media (max-width: 768px) {
+        padding-top: 30px;
+      }
+
+      .who-we-are-text {
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .square-dots {
+      width: 176px;
+      height: 176px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 110;
+
+      @media (max-width: 768px) {
+        bottom: -259px;
+      }
+
+      .square-dots-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .square-dot {
+          width: 7px;
+          height: 7px;
+        }
+
+        .orange-dot {
+          background-color: $MainOrange;
+        }
+
+        .green-dot {
+          background-color: $MainGreen2;
+        }
+
+        .grey-dot {
+          background-color: $Grey1;
+        }
+
+        .black-dot {
+          background-color: $MainBlack;
+        }
+      }
+    }
+  }
+
+  .who-we-are-image-wrapper {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 100;
+    max-width: 680px;
+
+    @media (max-width: 768px) {
+      width: calc(100% - 15px);
+    }
+
+    .who-we-are-image {
+      width: 100%;
+      height: auto;
+      top: 768px;
+    }
+  }
+}
