@@ -12,6 +12,7 @@
   @include('partials.who-we-are')
   @include('partials.slider-twoo')
   @include('partials.become-a-part')
-  slider-three
+  @include('partials.slider-three')
   @include('partials.logotips')
+  @include('partials.articles')
 @endsection

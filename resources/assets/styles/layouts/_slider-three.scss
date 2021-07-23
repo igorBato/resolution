@@ -1,19 +1,38 @@
-.slider-twoo-section {
+.slider-three-section {
   width: 100%;
   min-height: 772px;
   position: relative;
+  padding-top: 140px;
+
+  .how-we-do-title {
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 82px;
+    line-height: 88px;
+    letter-spacing: 1.01786px;
+    position: relative;
+    z-index: 100;
+    margin: 0;
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      font-size: 52px;
+      line-height: 60px;
+    }
+  }
 }
 
-.slider-twoo-image {
-  width: 50vw;
-  height: 50vw;
+.slider-three-image {
+  width: 934px;
+  height: 524px;
   position: absolute;
   top: 0;
   left: 0;
   // border: 1px solid red;
-  z-index: 130;
+  z-index: 110;
 
-  .slider-twoo-image-image {
+  .slider-three-image-image {
     @media (max-width: 768px) {
       width: calc(100% - 15px);
       height: auto;
@@ -28,16 +47,26 @@
   }
 }
 
-.slider-twoo-text {
-  width: 498px;
-  height: 378px;
-  position: absolute;
-  top: 226px;
-  left: 184px;
+.slider-three-text {
+  width: 677px;
+  height: 200px;
+  position: absolute !important;
+  top: 54px;
+  left: 93px;
   // border: 1px solid red;
-  z-index: 120;
+  z-index: 130;
   color: $MainWhite;
   // overflow: hidden;
+
+  .slider-three-text-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider-three-logotip {
+    max-width: 85px;
+    max-height: 24px;
+  }
 
   .slick-track {
     overflow: hidden;
@@ -52,7 +81,7 @@
     background-color: $MainOrange;
   }
 
-  .slider-twoo-text-title {
+  .slider-three-text-title {
     display: inline-block;
     font-family: Open Sans, sans-serif;
     font-style: normal;
@@ -62,13 +91,20 @@
     letter-spacing: 1px;
   }
 
-  .slider-twoo-text-text {
+  .slider-three-text-subtitle {
+    padding-left: 24px;
+  }
+
+  .slider-three-text-text {
     font-family: Open Sans, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1px;
+    padding-left: 24px;
+    padding-top: 24px;
+    max-width: 500px;
   }
 
   .slick-list {
@@ -80,13 +116,13 @@
   }
 }
 
-.black-plate-twoo-slider {
-  width: 920px;
-  height: 740px;
+.black-plate-three-slider {
+  width: 835px;
+  height: 320px;
   background-color: $MainBlack;
   position: absolute;
   right: 0;
-  bottom: -88px;
+  bottom: -154px;
   // border: 1px solid red;
-  z-index: 110;
+  z-index: 120;
 }

@@ -38,6 +38,24 @@ export default {
       asNavFor: '.slider-twoo-image',
       dots: true,
     });
+    $('.slider-three-image').slick({
+      // vertical: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      rtl: true,
+      asNavFor: '.slider-three-text',
+    });
+    $('.slider-three-text').slick({
+      adaptiveHeight: true,
+      vertical: true,
+      verticalSwiping: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.slider-three-image',
+      dots: true,
+    });
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
