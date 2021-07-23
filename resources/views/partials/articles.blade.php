@@ -46,14 +46,16 @@
                   <!-- <span> id: <?php echo $post_id ?> </span> -->
                 </div>
 
-                </div>
+
+                
+     </div>
                       <?php endwhile; ?>
                     <?php endif; ?>
 
                     <?php 
                     // wp_reset_postdata(); 
                     ?>
-
+{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" post_type="post" pause="true" scroll="false button_label="More articles >"]' ); !!}
         <div class="centered">
                     <?php  if (  $q->max_num_pages > 1 ) : ?>
                       <script>
@@ -70,6 +72,7 @@
                     <?php endif; ?>
 
             <!-- {!! do_shortcode( '[ajax_load_more container_type="div" css_classes="small-prewiev-icons" post_type="post" pause="true" scroll="false" sticky_posts="true" posts_per_page="3" destroy_after="2" order="ASC" no_results_text="<div class="no-results">Sorry, no posts more...</div>"]' ); !!} -->
+            
             
           </div>
 

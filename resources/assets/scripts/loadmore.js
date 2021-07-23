@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 		jQuery(function($){
 			$('#true_loadmore').click(function(){
 				console.log('load more');
@@ -10,7 +8,7 @@ import $ from 'jquery';
 					'page' : current_page,
 				};
 				$.ajax({
-					url:ajaxurl, 
+					url:afp_vars.afp_ajax_url, 
 					data:data, 
 					type:'POST', 
 					success:function(data){
@@ -25,5 +23,6 @@ import $ from 'jquery';
 					}
 				});
 			});
+			console.log(afp_vars);
 		});
 		

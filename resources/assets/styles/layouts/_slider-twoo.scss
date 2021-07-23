@@ -13,6 +13,11 @@
   // border: 1px solid red;
   z-index: 130;
 
+  @media (max-width: 768px) {
+    width: calc(100% - 15px);
+    height: auto;
+  }
+
   .slider-twoo-image-image {
     @media (max-width: 768px) {
       width: calc(100% - 15px);

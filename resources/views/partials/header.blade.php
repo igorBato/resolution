@@ -1,4 +1,5 @@
-<?php $logo=get_field( "logo" ); ?>
+<?php $header_logo=get_field( "header_logo", 7 ); ?>
+
 <div class="header-wrapper">
 
   <div class="header-wrapper-boxed">
@@ -8,7 +9,7 @@
         <nav class="header-navigation">
 
             <div class="logo-wrapper">
-              <img src="<?php echo $logo ?>" class="header-logotip" alt="resolution">
+              <img src="<?php echo $header_logo ?>" class="header-logotip" alt="resolution">
             </div>
 
             <div class="navigation">

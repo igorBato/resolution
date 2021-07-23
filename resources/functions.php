@@ -93,18 +93,21 @@ Container::getInstance()
 
 add_theme_support( 'post-thumbnails' );
 
+
+
 function true_load_posts(){
- 
+ var_dump("fdafwerf");
+ die;
 	$args = unserialize( stripslashes( $_POST['query'] ) );
-	$args['paged'] = $_POST['page'] + 1; // следующая страница
+	$args['paged'] = $_POST['page'] + 1; 
 	$args['post_status'] = 'publish';
  
-	// обычно лучше использовать WP_Query, но не здесь
+	
 	query_posts( $args );
-	// если посты есть
+	
 	if( have_posts() ) :
  
-		// запускаем цикл
+		
 		while( have_posts() ): the_post();
                 $category = get_the_category();
 
@@ -145,3 +148,17 @@ function true_load_posts(){
  
 add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
+
+
+function ajax_filter_posts_scripts() {
+    // Enqueue script
+    wp_register_script('afp_script', get_template_directory_uri() . '/assets/scripts/loadmore.js', false, null, false);
+    wp_enqueue_script('afp_script');
+    wp_localize_script( 'afp_script', 'afp_vars', array(
+          'afp_nonce' => wp_create_nonce( 'afp_nonce' ), // Create nonce which we later will use to verify AJAX request
+          'afp_ajax_url' => admin_url( 'admin-ajax.php' ),
+        )
+    );
+  }
+  add_action('wp_enqueue_scripts', 'ajax_filter_posts_scripts', 100);
