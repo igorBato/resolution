@@ -1,4 +1,3 @@
-<?php $slider_three=get_field( "slider_three" ); ?>
 <?php $articles_title=get_field( "articles_title" ); ?>
 
 <div class="articles-section lines-fullwidth"> 
@@ -11,25 +10,69 @@
 
     <div class="articles">
         <?php
-        if(have_posts()) {
-          while(have_posts()) {
-            the_post();
-          ?>
+              $args = array(
+                // 'tag'            => 'small',
+                'post_type'      => 'post',
+                'posts_per_page' => 3,
+                'orderby'        => 'date',
+                'order'          => 'ASC',
+                'meta_query' => [],
+                'suppress_filters' => false
+              );
+              $q = new WP_Query($args);
+            ?>
 
-          <div class="post-card">
-            <?php the_post_thumbnail('', $default_attr); ?>
-            <div class="card-body">
-              <h2 class="card-title"><?php the_title(); ?></h2>
-              <p class="card-text"><?php the_content(); ?></p>
-            </div>
-            <div class="card-footer text-muted">
-              <?php the_author(); ?>
-              <?php the_date(); ?>
-            </div>
+            <?php if ( $q->have_posts() ) : ?>
+
+              <?php 
+                $i = 0;
+                while ( $q->have_posts() ) : $q->the_post(); $post_id = get_the_ID(); $category = get_the_category();?>
+                <?php $i++;
+                if( ($i % 2) == 0 ) { echo "<div class='post-announce-small-right'>";
+	                } else {
+		                echo "<div class='post-announce-small'>";
+	              } ?>
+                
+
+                <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' => 'post-small-picture') ); ?>
+
+                <div class="post-announce-small-text-wrapper">
+                  <p class="category"><?php echo $category[0]->name; ?> </p>
+                  <h3 class="post-title"><?php the_title(); ?></h3>
+                  <div class="post-text"><?php the_excerpt(); ?></div>
+                  <div class="post-right-link">
+                    <a class="post-link"href="<?php the_permalink(); ?>">Weiterlesen ></a>
+                  </div>
+                  <!-- <span> id: <?php echo $post_id ?> </span> -->
+                </div>
+
+                </div>
+                      <?php endwhile; ?>
+                    <?php endif; ?>
+
+                    <?php 
+                    // wp_reset_postdata(); 
+                    ?>
+
+        <div class="centered">
+                    <?php  if (  $q->max_num_pages > 1 ) : ?>
+                      <script>
+                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                        var true_posts = '<?php echo serialize($q->query_vars); ?>';
+                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                        var max_pages = '<?php echo $q->max_num_pages; ?>';
+                      </script>
+                      <div class="opac-button-more" id="true_loadmore">
+                        <div class="button-plate-more">
+                          More articles >
+                        </div>
+                      </div>
+                    <?php endif; ?>
+
+            <!-- {!! do_shortcode( '[ajax_load_more container_type="div" css_classes="small-prewiev-icons" post_type="post" pause="true" scroll="false" sticky_posts="true" posts_per_page="3" destroy_after="2" order="ASC" no_results_text="<div class="no-results">Sorry, no posts more...</div>"]' ); !!} -->
+            
           </div>
-          <?php }
-        }
-      ?>
+
     </div>
 
   </div>
