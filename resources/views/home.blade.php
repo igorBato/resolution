@@ -15,4 +15,5 @@
   @include('partials.slider-three')
   @include('partials.logotips')
   @include('partials.articles')
+  @include('partials.slider-four')
 @endsection

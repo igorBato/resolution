@@ -23,6 +23,5 @@
 					}
 				});
 			});
-			console.log(afp_vars);
 		});
 		

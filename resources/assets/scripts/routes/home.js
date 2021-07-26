@@ -54,33 +54,40 @@ export default {
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: '.slider-three-image',
-      dots: true,
+      // dots: true,
     });
-    
-    // $('#true_loadmore').click(function(){
-    //   console.log('load more');
-    //   $(this).text('Loading...');
-    //   var data = {
-    //     'action': 'loadmore',
-    //     'query': true_posts,
-    //     'page' : current_page,
-    //   };
-    //   $.ajax({
-    //     url:ajaxurl, 
-    //     data:data, 
-    //     type:'POST', 
-    //     success:function(data){
-    //       if( data ) { 
-    //         $('.small-prewiev-icons').append(data);
-    //       // 	$('#true_loadmore').text('Load more...').before(data); 
-    //       // 	current_page++; // увеличиваем номер страницы на единицу
-    //       // 	if (current_page == max_pages) { $("#true_loadmore").remove(); }
-    //       // } else {
-    //         $('#true_loadmore').remove(); 
-    //       }
-    //     },
-    //   });
-    // });
+    $('.slider-four-image').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      fade: false,
+      dots: true,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
 
   },
   finalize() {

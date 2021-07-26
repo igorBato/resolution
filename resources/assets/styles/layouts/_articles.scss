@@ -313,6 +313,8 @@
       justify-content: center !important;
       height: 93px !important;
       border-radius: 0 !important;
+      position: relative !important;
+      z-index: 110;
     }
   }
 }
