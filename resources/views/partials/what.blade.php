@@ -4,7 +4,7 @@
 
   <div class="site-wrapper-boxed">
 
-    <div class="what-wrapper">
+    <div class="what-wrapper" id="what">
           
       <div class="what-title-wrapper">  
         <h2 class="what-title"><?php 

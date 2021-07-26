@@ -6,6 +6,13 @@
   left: 0;
   width: 100%;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    z-index: 140;
+    background-color: $DarkGreen;
+    box-shadow: 0 0 8px 0 rgba(34, 60, 80, 0.2);
+  }
 }
 
 .header-wrapper-boxed {
@@ -23,6 +30,7 @@
   .menu {
     display: flex;
     list-style-type: none;
+    padding-left: 0;
 
     li {
       margin-left: 90px;
@@ -41,6 +49,7 @@
       font-size: 18px;
       line-height: 90px;
       text-transform: uppercase;
+      transition: color ease-in-out 0.3s;
 
       @media (max-width: 768px) {
         font-family: Open Sans, sans-serif;
@@ -51,6 +60,10 @@
         color: $MainBlack;
         letter-spacing: 1px;
       }
+    }
+
+    li a:hover {
+      color: $MainOrange;
     }
   }
 }

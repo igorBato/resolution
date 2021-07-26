@@ -5,7 +5,7 @@
 
   <div class="site-wrapper-boxed">
 
-    <div class="who-we-are-wrapper">
+    <div class="who-we-are-wrapper" id="we">
           
       <div class="who-we-are-title-wrapper">  
         <h2 class="who-we-are-title"><?php 

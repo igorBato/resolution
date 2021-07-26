@@ -11,6 +11,10 @@
     justify-content: space-between;
     margin-bottom: 106px;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .footer-navigation {
       display: flex;
       align-items: flex-start;
@@ -22,6 +26,13 @@
         align-items: flex-start;
         max-width: 113px;
         margin-left: 144px;
+
+        @media (max-width: 768px) {
+          max-width: 101px;
+          margin-left: 0;
+          margin-right: 70px;
+          margin-top: 60px;
+        }
 
         .footer-menu-title {
           font-family: Open Sans, sans-serif;
@@ -43,6 +54,11 @@
           color: $MainWhite;
           opacity: 0.7;
           text-decoration: none;
+          transition: color ease-in-out 0.3s;
+        }
+
+        a:hover {
+          color: $MainOrange;
         }
 
         .menu {
@@ -62,6 +78,11 @@
             color: $MainWhite;
             opacity: 0.7;
             text-decoration: none;
+            transition: color ease-in-out 0.3s;
+          }
+
+          a:hover {
+            color: $MainOrange;
           }
         }
       }

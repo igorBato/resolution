@@ -32,11 +32,12 @@
 
           <div class="navigation-wrapper">
             <h3 class="footer-menu-title"><?php echo $footer_menu_twoo_title ?></h3>
-              <?php foreach($footer_menu_block_twoo as $u): ?>
+              <!-- <?php foreach($footer_menu_block_twoo as $u): ?>
                 
                   <a href="<?php echo $u["link"]; ?>"><?php echo $u["link_text"]; ?></a>
                 
-              <?php endforeach ?>
+              <?php endforeach ?> -->
+              <?php wp_nav_menu([ 'menu' => 'footer-menu' ]); ?>
           </div>
 
           <div class="navigation-wrapper">

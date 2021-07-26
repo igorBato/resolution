@@ -5,7 +5,7 @@
 
   <div class="site-wrapper-boxed">
 
-  <div class="how-we-do-title-wrapper">  
+  <div class="how-we-do-title-wrapper" id="do">  
         <h2 class="how-we-do-title"><?php 
           $how_we_do_title = explode(" ", $how_we_do_title, 2);
           echo '<span class="orange-text">' . $how_we_do_title[0] . '</span> ' . $how_we_do_title[1];
