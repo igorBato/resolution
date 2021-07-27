@@ -93,7 +93,7 @@ Container::getInstance()
 
 add_theme_support( 'post-thumbnails' );
 
-
+add_image_size( 'homepage-thumb', 480, 290, true );
 
 function true_load_posts(){
  var_dump("fdafwerf");
@@ -148,6 +148,102 @@ function true_load_posts(){
  
 add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
+
+//filter
+function true_filter_function(){
+ 
+
+    wp_register_script('afp_script', App\asset_path('scripts/routes/blog.js'), false, null, false);
+    wp_enqueue_script('afp_script');
+
+    wp_localize_script(
+        'afp_script',
+        'afp_vars',
+        array(
+        'afp_nonce' => wp_create_nonce('afp_nonce'),
+        'afp_ajax_url' => admin_url('admin-ajax.php'),
+      )
+    );
+
+
+	$args = array(
+		'orderby' => 'date', 
+		'order'	=> $_GET[ 'date' ],
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms' => $_GET['data'],
+            ),
+        ),
+        // 'category_name' => 'Performance Marketing',
+	);
+ 
+	// for taxonomy
+	// if( isset( $_POST[ 'categoryfilter' ] )) {
+	// 	$args[ 'tax_query' ] = array(
+	// 		array(
+	// 			'taxonomy' => 'category',
+	// 			'field' => 'id',
+	// 			'terms' => $_POST[ 'categoryfilter' ],
+    //             'category_name' => 'performance-marketing',
+	// 		)
+	// 	);
+	// }
+
+    // $query = new WP_Query( [ 'category_name' => 'performance-marketing'] );
+ 
+ 
+	query_posts( $args );
+
+ 
+	if ( have_posts() ) {
+        $i = 0;
+      		while ( have_posts() ) : the_post();
+			
+                        ?>
+
+                <?php $category = get_the_category();
+                $post_id = get_the_ID();?>
+                        <?php $i++;
+
+                        if($i==1) {echo "<div class='post-announce-big'>";}
+                        else{
+                        if( ($i % 2) == 0 ) { echo "<div class='post-announce-small-right'>";
+                            } else {
+                                echo "<div class='post-announce-small'>";
+                        }
+                         }?>
+                        
+
+                        <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' => 'post-small-picture') ); ?>
+
+                        <div class="post-announce-small-text-wrapper">
+                            <p class="category"><?php echo $category[0]->name; ?> </p>
+                            <h3 class="post-title"><?php the_title(); ?></h3>
+                            <div class="post-text"><?php the_excerpt(); ?></div>
+                            <div class="post-right-link">
+                                <a class="post-link"href="<?php the_permalink(); ?>">Weiterlesen ></a>
+                            </div>
+                            <span> id: <?php echo $post_id ?> </span>
+                        </div>
+                    </div>
+                
+                <?php
+
+		endwhile;
+    
+	} else {
+		echo 'No posts...';
+	}
+
+	die();
+}
+
+add_action( 'wp_ajax_filter', 'true_filter_function' ); 
+add_action( 'wp_ajax_nopriv_filter', 'true_filter_function' );
+
 
 
 

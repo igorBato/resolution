@@ -3,6 +3,7 @@
 
 <div class="blog-section lines-fullwidth-blog">
 
+<div class="black-plate"></div>
 
   <div class="site-wrapper-boxed">
 
@@ -16,43 +17,46 @@
         <h1 class="h1 blog-title"><?php echo $blog_title ?></h1>
       </div>
 
-      <div class="navigation-line">
+      <div class="navigation-line" id="select">
 
-        <a href="#" class="blog-navigation-all-categories">ALL</a>
-      
-        <?php $args = array(
-            'show_option_all'    => '',
-            'show_option_none'   => __('No categories'),
-            'orderby'            => 'name',
-            'order'              => 'ASC',
-            'style'              => 'list',
-            'show_count'         => 0,
-            'hide_empty'         => 1,
-            'use_desc_for_title' => 0,
-            'child_of'           => 0,
-            'feed'               => '',
-            'feed_type'          => '',
-            'feed_image'         => '',
-            'exclude'            => '',
-            'exclude_tree'       => '',
-            'include'            => '',
-            'hierarchical'       => true,
-            'title_li'           => 0,
-            'number'             => NULL,
-            'echo'               => 1,
-            'depth'              => 0,
-            'current_category'   => 0,
-            'pad_counts'         => 0,
-            'taxonomy'           => 'category',
-            'walker'             => 'Walker_Category',
-            'hide_title_if_empty' => false,
-            'separator'          => '<br />',
-          );
+        <form>
+        <input type="radio" name="radio" value="" id="r"/>
+        <label for="r">ALL</label>
+<?php
+        $categories = get_categories( [
+	'taxonomy'     => 'category',
+	'type'         => 'post',
+	'child_of'     => 0,
+	'parent'       => '',
+	'orderby'      => 'name',
+	'order'        => 'ASC',
+	'hide_empty'   => 1,
+	'hierarchical' => 1,
+	'exclude'      => '',
+	'include'      => '',
+	'number'       => 0,
+	'pad_counts'   => false,
+] );
 
-          echo '<ul>';
-            wp_list_categories( $args );
-          echo '</ul>';
-          ?>
+if( $categories ){
+  $count=0;
+	foreach( $categories as $cat ){?>
+<?php $count++; ?>
+      <input type="radio" name="radio" value="<?php echo $cat->slug?>" id="r<?php echo $count?>"/>
+      <label for="r<?php echo $count?>"><?php echo $cat->slug?></label>
+      <?php
+    
+		
+
+	}
+}
+
+?>
+
+
+          
+        </form>
+
       </div>
 
     </div>

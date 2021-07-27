@@ -7,8 +7,8 @@
 
   <div class="how-we-do-title-wrapper" id="do">  
         <h2 class="how-we-do-title"><?php 
-          $how_we_do_title = explode(" ", $how_we_do_title, 2);
-          echo '<span class="orange-text">' . $how_we_do_title[0] . '</span> ' . $how_we_do_title[1];
+          $how_we_do_title = explode(" ", $how_we_do_title, 3);
+          echo $how_we_do_title[0] . "\n" . $how_we_do_title[1] . "\n" . '<span class="orange-text">'. $how_we_do_title[2] . '</span> ';
         ?></h2>
       </div>
 

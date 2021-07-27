@@ -6,5 +6,5 @@
 
 @section('content')
   @include('partials.blog-navigation')
-  @include('partials.articles')
+  @include('partials.blog-articles')
 @endsection

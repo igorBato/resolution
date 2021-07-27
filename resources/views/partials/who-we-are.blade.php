@@ -9,8 +9,8 @@
           
       <div class="who-we-are-title-wrapper">  
         <h2 class="who-we-are-title"><?php 
-          $who_we_are_title = explode(" ", $who_we_are_title, 2);
-          echo '<span class="orange-text">' . $who_we_are_title[0] . '</span> ' . $who_we_are_title[1];
+          $who_we_are_title = explode(" ", $who_we_are_title, 3);
+          echo $who_we_are_title[0] . "\n" .'<span class="orange-text">' . $who_we_are_title[1] . '</span> ' . $who_we_are_title[2];
         ?></h2>
       </div>
 
