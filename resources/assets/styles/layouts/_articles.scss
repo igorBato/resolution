@@ -75,7 +75,6 @@
         line-height: 170%;
         color: $MainBlack;
         padding: 10px 24px;
-        background-color: $Marker-post;
         margin: 0;
       }
 
@@ -217,76 +216,156 @@
     }
   }
 
-  .alm-reveal {
-    .post-announce-small {
-      display: flex;
-      position: relative;
-      z-index: 110;
-      margin-bottom: 100px;
+  .ajax-load-more-wrap {
+    .alm-listing {
+      .alm-reveal {
+        .post-announce-small {
+          display: flex;
+          position: relative;
+          z-index: 110;
+          margin-bottom: 100px;
 
-      @media (max-width: 768px) {
-        flex-direction: column;
-      }
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
 
-      img {
-        width: 480px;
-        height: 290px;
-      }
+          img {
+            width: 480px;
+            height: 290px;
+          }
 
-      .post-announce-small-text-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 70px;
+          .post-announce-small-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 70px;
 
-        .post-link {
-          font-family: Open Sans, sans-serif;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 18px;
-          line-height: 90px;
-          letter-spacing: 1px;
-          color: $MainOrange !important;
-          text-decoration: none;
+            .post-link {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 90px;
+              letter-spacing: 1px;
+              color: $MainOrange !important;
+              text-decoration: none;
+            }
+
+            .category {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 170%;
+              color: $MainBlack;
+              padding: 10px 24px;
+              background-color: $Marker-post;
+              margin: 0;
+            }
+
+            .post-title {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 32px;
+              line-height: 44px;
+              color: $MainBlack;
+              margin-top: 0;
+              margin-bottom: 0;
+              padding-top: 27px;
+              padding-bottom: 18px;
+            }
+
+            .post-text {
+              margin: 0;
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 30px;
+              letter-spacing: 1px;
+              color: $MainBlack;
+
+              p {
+                margin: 0;
+              }
+            }
+          }
         }
 
-        .category {
-          font-family: Open Sans, sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 170%;
-          color: $MainBlack;
-          padding: 10px 24px;
-          background-color: $Marker-post;
-          margin: 0;
-        }
+        .post-announce-small:nth-child(odd) {
+          display: flex;
+          flex-direction: row-reverse;
+          margin-left: auto;
+          position: relative;
+          z-index: 110;
+          margin-bottom: 100px;
 
-        .post-title {
-          font-family: Open Sans, sans-serif;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 32px;
-          line-height: 44px;
-          color: $MainBlack;
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-top: 27px;
-          padding-bottom: 18px;
-        }
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
 
-        .post-text {
-          margin: 0;
-          font-family: Open Sans, sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 18px;
-          line-height: 30px;
-          letter-spacing: 1px;
-          color: $MainBlack;
+          img {
+            width: 480px;
+            height: 290px;
+          }
 
-          p {
-            margin: 0;
+          .post-announce-small-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 70px;
+
+            .post-link {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 90px;
+              letter-spacing: 1px;
+              color: $MainOrange !important;
+              text-decoration: none;
+            }
+
+            .category {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 170%;
+              color: $MainBlack;
+              padding: 10px 24px;
+              background-color: $Marker-post;
+              margin: 0;
+            }
+
+            .post-title {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 32px;
+              line-height: 44px;
+              color: $MainBlack;
+              margin-top: 0;
+              margin-bottom: 0;
+              padding-top: 27px;
+              padding-bottom: 18px;
+            }
+
+            .post-text {
+              margin: 0;
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 30px;
+              letter-spacing: 1px;
+              color: $MainBlack;
+
+              p {
+                margin: 0;
+              }
+            }
           }
         }
       }

@@ -20,7 +20,7 @@
       <div class="navigation-line" id="select">
 
         <form>
-        <input type="radio" name="radio" value="" id="r"/>
+        <input type="radio" name="radio" value="*" id="r"/>
         <label for="r">ALL</label>
 <?php
         $categories = get_categories( [

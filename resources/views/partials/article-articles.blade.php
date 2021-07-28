@@ -1,8 +1,12 @@
-
+<?php $articles_title=get_field( "articles_title",7 ); ?>
 
 <div class="articles-section lines-fullwidth"> 
 
   <div class="site-wrapper-boxed">
+
+  <div class="articles-title-wrapper">
+      <h2 class="h2 articles-title"><?php echo $articles_title ?></h2>
+    </div>
 
 
     <div class="articles">
@@ -25,7 +29,7 @@
 
               <?php 
                 $i = 0;
-                while ( $q->have_posts() ) : $q->the_post(); $post_id = get_the_ID(); ?>
+                while ( $q->have_posts() ) : $q->the_post(); $post_id = get_the_ID();  $category_color=get_field( "category_color" ); ?>
                 <?php $i++;
                 if( ($i % 2) == 0 ) { echo "<div class='post-announce-small-right'>";
 	                } else {
@@ -36,7 +40,7 @@
                 <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' => 'post-small-picture') ); ?>
 
                 <div class="post-announce-small-text-wrapper">
-                  <p class="category"><?php echo $category[0]->name; ?> </p>
+                  <p class="category" style="background-color: <?php echo $category_color ;?>;"><?php echo $category[0]->name; ?> </p>
                   <h3 class="post-title"><?php the_title(); ?></h3>
                   <div class="post-text"><?php the_excerpt(); ?></div>
                   <div class="post-right-link">
