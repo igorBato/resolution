@@ -57,6 +57,13 @@
   .navigation-line {
     display: flex;
     margin-top: 67px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 2px;
+    }
 
     .blog-navigation-all-categories {
       max-width: 102px;

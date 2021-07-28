@@ -226,7 +226,7 @@ function true_filter_function(){
                             <div class="post-right-link">
                                 <a class="post-link"href="<?php the_permalink(); ?>">Weiterlesen ></a>
                             </div>
-                            <span> id: <?php echo $post_id ?> </span>
+                            <!-- <span> id: <?php echo $post_id ?> </span> -->
                         </div>
                     </div>
                 
@@ -258,3 +258,11 @@ function ajax_filter_posts_scripts() {
     );
   }
   add_action('wp_enqueue_scripts', 'ajax_filter_posts_scripts', 100);
+
+  add_filter( 'excerpt_length', function(){
+	return 8;
+} );
+
+  add_filter('excerpt_more', function($more) {
+    return '...';
+});
