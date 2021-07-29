@@ -150,6 +150,7 @@ add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 
 
+
 //filter
 function true_filter_function(){
  
@@ -168,7 +169,7 @@ function true_filter_function(){
 
 
 	$args = array(
-        'posts_per_page' => 2,
+        'posts_per_page' => 3,
 		'orderby' => 'date', 
 		'order'	=> $_GET[ 'date' ],
         'tax_query' => array(
@@ -194,7 +195,7 @@ function true_filter_function(){
 
                 <?php $category = get_the_category();
                 $categorysample = strval($category[0]->name);
-                 $category_color=get_field( "category_color" );
+                $category_color=get_field( "category_color" );
                 $post_id = get_the_ID();?>
                         <?php $i++;
 
@@ -218,19 +219,22 @@ function true_filter_function(){
                             </div>
                             <!-- <span> id: <?php echo $post_id ?> </span> -->
                         </div>
+                        
                     </div>
                 
                 <?php
 
 		endwhile;
 
-        
-		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" container_type="div" category="'.$categorysample.'" post__not_in="'.$post_id.'" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
-	
-    
+        // get_template_part( 'partials/short-code' );
+
+
+		  
 	} else {
 		echo 'No posts...';
 	}
+echo  do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" container_type="div" category="'.$category[0]->slug.'" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+
 
 	die();
 }

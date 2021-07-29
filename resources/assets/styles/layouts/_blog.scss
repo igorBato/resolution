@@ -92,10 +92,16 @@
         text-decoration: none;
         cursor: pointer;
         transition: color ease-in-out 0.3s;
+        padding: 13px 0;
       }
 
       label:hover {
         color: $MainOrange;
+      }
+
+      input:checked + label {
+        background: #353535;
+        padding: 13px 40px;
       }
     }
   }

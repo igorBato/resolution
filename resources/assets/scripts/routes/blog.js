@@ -1,9 +1,9 @@
 export default {
   init() {
     jQuery( function( $ ){ 
-      $('input[type="radio"]').click(function(e){
+      $('input[type="radio"]').click(function(){
 
-        e.preventDefault();
+        // e.preventDefault();
 				console.log( 'filter' );
 				// var filter = $('.navigation-line');
         var filter = $('form');
@@ -20,6 +20,7 @@ export default {
           if (response) {
             $('.blog-articles').empty();
 						$('.blog-articles').append(response);
+            ajaxloadmore.start(document.querySelector("#ajax-load-more"));
             $('.blog-articles').offset().top;
             // console.log(response);
             console.log(serial);
