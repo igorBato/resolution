@@ -12,8 +12,8 @@
     <div class="articles">
         <?php
         $category = get_the_category();
+        $categorysample = strval($category[0]->name);
               $args = array(
-                // 'tag'            => 'small',
                 'post_type'      => 'post',
                 'posts_per_page' => 3,
                 'orderby'        => 'date',
@@ -58,7 +58,12 @@
                     <?php 
                     // wp_reset_postdata(); 
                     ?>
-{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" post_type="post" pause="true" scroll="false button_label="More articles >"]' ); !!}
+
+<?php
+		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" container_type="div" category="'.$categorysample.'" post__not_in="'.$post_id.'" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+	?>
+
+
         <!-- <div class="centered">
                     <?php  if (  $q->max_num_pages > 1 ) : ?>
                       <script>

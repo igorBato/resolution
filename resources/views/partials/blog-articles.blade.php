@@ -10,7 +10,7 @@
               $args = array(
                 // 'tag'            => 'small',
                 'post_type'      => 'post',
-                'posts_per_page' => -1,
+                'posts_per_page' => 5,
                 'orderby'        => 'date',
                 'order'          => 'ASC',
                 'meta_query' => [],
@@ -20,10 +20,15 @@
             ?>
 
             <?php if ( $q->have_posts() ) : ?>
+              
+              
 
               <?php 
                 $i = 0;
                 while ( $q->have_posts() ) : $q->the_post(); $post_id = get_the_ID(); $category = get_the_category(); $category_color=get_field( "category_color" );?>
+                
+                
+
                 <?php $i++;
                 if($i==1) {echo "<div class='post-announce-big'>";}
                 else{
@@ -50,13 +55,16 @@
                 
      </div>
                       <?php endwhile; ?>
+                      
                     <?php endif; ?>
 
                     <?php 
                     // wp_reset_postdata(); 
                     ?>
-{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" post_type="post" pause="true" scroll="false button_label="More articles >"]' ); !!}
-        
+
+<?php
+		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" posts_per_page="4" container_type="div" order="ASC" offset="5" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+	?>       
 
     </div>
 

@@ -168,6 +168,7 @@ function true_filter_function(){
 
 
 	$args = array(
+        'posts_per_page' => 2,
 		'orderby' => 'date', 
 		'order'	=> $_GET[ 'date' ],
         'tax_query' => array(
@@ -177,34 +178,22 @@ function true_filter_function(){
                 'terms' => $_GET['data'],
             ),
         ),
-        // 'category_name' => 'Performance Marketing',
 	);
- 
-	// for taxonomy
-	// if( isset( $_POST[ 'categoryfilter' ] )) {
-	// 	$args[ 'tax_query' ] = array(
-	// 		array(
-	// 			'taxonomy' => 'category',
-	// 			'field' => 'id',
-	// 			'terms' => $_POST[ 'categoryfilter' ],
-    //             'category_name' => 'performance-marketing',
-	// 		)
-	// 	);
-	// }
-
-    // $query = new WP_Query( [ 'category_name' => 'performance-marketing'] );
  
  
 	query_posts( $args );
 
  
 	if ( have_posts() ) {
+
+
         $i = 0;
       		while ( have_posts() ) : the_post();
 			
                         ?>
 
                 <?php $category = get_the_category();
+                $categorysample = strval($category[0]->name);
                  $category_color=get_field( "category_color" );
                 $post_id = get_the_ID();?>
                         <?php $i++;
@@ -234,6 +223,10 @@ function true_filter_function(){
                 <?php
 
 		endwhile;
+
+        
+		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" container_type="div" category="'.$categorysample.'" post__not_in="'.$post_id.'" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+	
     
 	} else {
 		echo 'No posts...';
