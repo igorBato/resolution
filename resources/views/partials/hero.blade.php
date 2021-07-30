@@ -1,6 +1,7 @@
 <?php $hero_image=get_field( "hero_image" ); ?>
 <?php $hero_title=get_field( "hero_title" ); ?>
 <?php $hero_sub_title=get_field( "hero_sub_title" ); ?>
+
 <div class="hero-section lines-fullwidth">
 
   <div class="black-plate"></div>

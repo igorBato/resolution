@@ -89,6 +89,27 @@ export default {
       ],
     });
 
+    $('#sendmail').on('click', () => {
+      $('.mail-pop-up').css({'display' : 'flex'});
+      $('.site-blur').css({'filter' : 'blur(10px)'});
+      console.log('click display flex');
+    })
+
+    $('.mail-pop-up').on('click', (event) => {
+
+      var $wpcf7 = $('.wpcf7');
+      console.log('click site blur');
+      
+      if($wpcf7.has(event.target).length == 0 && !$wpcf7.is(event.target)){
+
+        console.log('event.target: ' + event.target);
+      $('.mail-pop-up').css({'display' : 'none'});
+      $('.site-blur').css({'filter' : 'none'});
+      }
+    })
+
+
+    
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS

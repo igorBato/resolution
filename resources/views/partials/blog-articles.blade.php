@@ -29,31 +29,7 @@
                 
                 
 
-                <?php $i++;
-                if($i==1) {echo "<div class='post-announce-big'>";}
-                else{
-                if( ($i % 2) == 0 ) { echo "<div class='post-announce-small-right'>";
-	                } else {
-		                echo "<div class='post-announce-small'>";
-	              } 
-                }?>
                 
-
-                <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' => 'post-small-picture') ); ?>
-
-                <div class="post-announce-small-text-wrapper">
-                  <p class="category" style="background-color: <?php echo $category_color ;?>;"><?php echo $category[0]->name; ?> </p>
-                  <h3 class="post-title"><?php the_title(); ?></h3>
-                  <div class="post-text"><?php the_excerpt(); ?></div>
-                  <div class="post-right-link">
-                    <a class="post-link"href="<?php the_permalink(); ?>">Weiterlesen ></a>
-                  </div>
-                  <!-- <span> id: <?php echo $post_id ?> </span> -->
-                </div>
-
-
-                
-     </div>
                       <?php endwhile; ?>
                       
                     <?php endif; ?>
@@ -63,7 +39,7 @@
                     ?>
 
 <?php
-		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" posts_per_page="4" container_type="div" order="ASC" offset="5" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+		echo do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" posts_per_page="4" container_type="div" order="ASC" css_classes="articles" post_type="post" pause="false" scroll="false" button_label="More articles >"]');
 	?>       
 
     </div>

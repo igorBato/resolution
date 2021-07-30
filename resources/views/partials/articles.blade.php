@@ -55,7 +55,7 @@
                     <?php 
                     // wp_reset_postdata(); 
                     ?>
-{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" post_type="post" pause="true" scroll="false button_label="More articles >"]' ); !!}
+{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" posts_per_page="4" post_type="post" pause="true" scroll="false" button_label="More articles >"]' ); !!}
         <!-- <div class="centered">
                     <?php  if (  $q->max_num_pages > 1 ) : ?>
                       <script>

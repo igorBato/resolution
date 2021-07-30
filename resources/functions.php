@@ -194,35 +194,7 @@ function true_filter_function(){
                         ?>
 
                 <?php $category = get_the_category();
-                $categorysample = strval($category[0]->name);
-                $category_color=get_field( "category_color" );
-                $post_id = get_the_ID();?>
-                        <?php $i++;
-
-                        if($i==1) {echo "<div class='post-announce-big'>";}
-                        else{
-                        if( ($i % 2) == 0 ) { echo "<div class='post-announce-small-right'>";
-                            } else {
-                                echo "<div class='post-announce-small'>";
-                        }
-                         }?>
-                        
-
-                        <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' => 'post-small-picture') ); ?>
-
-                        <div class="post-announce-small-text-wrapper">
-                            <p class="category" style="background-color: <?php echo $category_color ;?>;"><?php echo $category[0]->name; ?> </p>
-                            <h3 class="post-title"><?php the_title(); ?></h3>
-                            <div class="post-text"><?php the_excerpt(); ?></div>
-                            <div class="post-right-link">
-                                <a class="post-link"href="<?php the_permalink(); ?>">Weiterlesen ></a>
-                            </div>
-                            <!-- <span> id: <?php echo $post_id ?> </span> -->
-                        </div>
-                        
-                    </div>
                 
-                <?php
 
 		endwhile;
 
@@ -233,7 +205,7 @@ function true_filter_function(){
 	} else {
 		echo 'No posts...';
 	}
-echo  do_shortcode('[ajax_load_more id="loadmore" loading_style="grey" container_type="div" category="'.$category[0]->slug.'" css_classes="articles" post_type="post" pause="true" scroll="false" button_label="More articles >"]');
+echo  do_shortcode('[ajax_load_more id="loadmore" posts_per_page="4" loading_style="grey" container_type="div" category="'.$category[0]->slug.'" css_classes="articles" post_type="post" pause="false" scroll="false" button_label="More articles >"]');
 
 
 	die();
