@@ -85,10 +85,12 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 200;
   display: none;
+  align-items: center;
+  justify-content: center;
 
   #wpcf7-f10-o1 {
     position: relative;
-    margin: 0 auto;
+    margin: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +101,10 @@ body {
     background-color: $MainWhite;
     box-sizing: border-box;
 
+    @media (max-width: 375px) {
+      padding: 60px 0;
+    }
+
     .init,
     .invalid {
       display: flex;
@@ -106,8 +112,16 @@ body {
       align-items: flex-start;
       width: 69%;
 
+      @media (max-width: 463px) {
+        width: 80%;
+      }
+
       p {
         margin: 0;
+
+        @media (max-width: 375px) {
+          width: 100%;
+        }
       }
 
       .orange {
@@ -125,6 +139,12 @@ body {
         font-size: 50px;
         line-height: 58px;
         letter-spacing: 1.23642px;
+
+        @media (max-width: 550px) {
+          font-size: 32px;
+          line-height: 37px;
+          letter-spacing: 0.23642px;
+        }
       }
 
       input[type="text"],
@@ -140,6 +160,7 @@ body {
         line-height: 30px;
         color: #6a6a6a;
         padding-top: 48px;
+        width: 100%;
       }
 
       label {
@@ -163,10 +184,20 @@ body {
         margin-top: 80px;
         cursor: pointer;
         transition: opacity 0.3s ease-in-out;
+
+        @media (max-width: 463px) {
+          width: 100%;
+          line-height: 45px;
+        }
       }
 
       input[type="submit"]:hover {
         opacity: 0.3;
+      }
+
+      .wpcf7-response-output {
+        margin-top: 10px;
+        margin-left: 0;
       }
     }
   }

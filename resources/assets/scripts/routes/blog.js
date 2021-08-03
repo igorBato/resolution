@@ -20,7 +20,7 @@ export default {
           if (response) {
             $('.blog-articles').empty();
 						$('.blog-articles').append(response);
-            ajaxloadmore.start(document.querySelector("#ajax-load-more"));
+            ajaxloadmore.start(document.querySelector('#ajax-load-more'));
             $('.blog-articles').offset().top;
             // console.log(response);
             console.log(serial);

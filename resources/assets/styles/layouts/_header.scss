@@ -68,9 +68,10 @@
   }
 }
 
-.logo-wrapper {
+.header-logo-wrapper {
   max-width: 215px;
   max-height: 33px;
+  transition: opacity 0.3s ease-in-out;
 
   @media (max-width: 768px) {
     max-width: 111px;
@@ -80,4 +81,8 @@
   .header-logotip {
     width: 100%;
   }
+}
+
+.header-logo-wrapper:hover {
+  opacity: 0.3;
 }

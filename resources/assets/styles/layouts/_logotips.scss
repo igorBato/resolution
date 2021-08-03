@@ -7,20 +7,27 @@
   background-color: $MainWhite;
   position: relative;
 
-  .logotips-wrapper {
-    display: flex;
-    flex-direction: row;
+  .boxed-wrapper {
     position: relative;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    z-index: 110;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+    .logotips-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-width: 1200px;
 
-    .logo-wrapper {
-      flex-basis: 20%;
-      margin-top: 75px;
+      .logo-wrapper {
+        flex-basis: 20%;
+        margin-top: 75px;
+      }
     }
+  }
+
+  .boxed-wrapper::-webkit-scrollbar {
+    width: 2px;
   }
 }

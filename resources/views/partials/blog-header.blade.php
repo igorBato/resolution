@@ -7,7 +7,7 @@
 
         <nav class="header-navigation">
 
-            <div class="logo-wrapper">
+            <div class="header-logo-wrapper">
               <a href="<?php echo home_url(); ?>">
                 <img src="<?php echo $blog_header_logo ?>" class="header-logotip" alt="resolution">
               </a>

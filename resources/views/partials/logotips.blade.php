@@ -4,21 +4,25 @@
 
   <div class="site-wrapper-boxed">
 
-    <div class="logotips-wrapper">
+    <div class="boxed-wrapper">
 
-        <?php foreach($logos as $f): ?>
+      <div class="logotips-wrapper">
 
-          <div class="logo-wrapper">
+          <?php foreach($logos as $f): ?>
 
-            <a href="<?php echo $f["link"]; ?>" target="_blank">
+            <div class="logo-wrapper">
 
-            <img src="<?php echo $f["image"]; ?>" class="partners-logo" alt="partners_logo">
+              <a href="<?php echo $f["link"]; ?>" target="_blank">
 
-            </a>
+              <img src="<?php echo $f["image"]; ?>" class="partners-logo" alt="partners_logo">
 
-          </div>
+              </a>
 
-        <?php endforeach ?>
+            </div>
+
+          <?php endforeach ?>
+
+      </div>
 
     </div>
       

@@ -5,6 +5,14 @@
 
   <div class="site-wrapper-boxed">
 
+    <div class="nav-four-wrapper">
+      <div class="four-arrow-prev"><</div>
+      <div class="four-prev">01</div>
+        <div class="progress-four" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="four-next">02</div>
+      <div class="four-arrow-next">></div>
+    </div>
+
     <div class="slider-four-title-wrapper">  
       <h2 class="slider-four-title"><?php echo $slider_four_title ?></h2>
     </div>

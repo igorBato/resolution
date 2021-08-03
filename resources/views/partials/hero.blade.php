@@ -20,6 +20,7 @@
 
       <div class="hero-image-wrapper">
         <img src="<?php echo $hero_image ?>" class="hero-image" alt="hero image">
+        <div class="orange-plate"></div>
       </div>
 
       <div class="square-dots">

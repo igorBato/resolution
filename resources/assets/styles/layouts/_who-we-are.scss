@@ -7,6 +7,14 @@
   background-color: $MainWhite;
   position: relative;
 
+  @media (max-width: 1174px) {
+    padding-top: 700px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+
   .who-we-are-wrapper {
     display: flex;
     flex-direction: column;
@@ -28,6 +36,7 @@
         letter-spacing: 1.01786px;
         position: relative;
         z-index: 100;
+        transition: font-size 0.3s ease-in-out;
 
         @media (max-width: 768px) {
           font-size: 52px;
@@ -114,6 +123,9 @@
 
     @media (max-width: 768px) {
       width: calc(100% - 15px);
+      position: relative;
+      z-index: 110;
+      top: 0;
     }
 
     .who-we-are-image {

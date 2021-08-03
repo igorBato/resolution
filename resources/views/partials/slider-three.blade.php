@@ -26,6 +26,14 @@
 
     <div class="black-plate-three-slider">
 
+    <div class="nav-three-wrapper">
+      <div class="three-arrow-prev"><</div>
+      <div class="three-prev">01</div>
+        <div class="progress-three" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="three-next">02</div>
+      <div class="three-arrow-next">></div>
+    </div>
+
       <div class="slider-three-text">
 
         <?php foreach($slider_three as $t): ?>

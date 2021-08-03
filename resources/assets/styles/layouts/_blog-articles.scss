@@ -305,6 +305,16 @@
       img {
         width: 480px;
         height: 290px;
+
+        @media (max-width: 768px) {
+          max-width: 359px;
+          height: auto;
+        }
+
+        @media (max-width: 375px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
       .post-announce-small-text-wrapper {
@@ -312,6 +322,12 @@
         flex-direction: column;
         align-items: flex-start;
         margin-left: 70px;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-left: 0;
+          padding-top: 400px;
+        }
 
         .post-link {
           font-family: Open Sans, sans-serif;
@@ -381,6 +397,18 @@
       img {
         width: 480px;
         height: 290px;
+
+        @media (max-width: 768px) {
+          right: -15px;
+          max-width: 359px;
+          height: auto;
+          position: absolute;
+        }
+
+        @media (max-width: 375px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
       .post-announce-small-text-wrapper {
@@ -388,6 +416,12 @@
         flex-direction: column;
         align-items: flex-start;
         margin-right: 70px;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-left: 0;
+          padding-top: 400px;
+        }
 
         .post-link {
           font-family: Open Sans, sans-serif;
@@ -441,6 +475,30 @@
         }
       }
     }
+
+    .post-announce-small:nth-child(odd) {
+      img {
+        @media (max-width: 768px) {
+          left: -15px;
+          max-width: 359px;
+          height: auto;
+          position: absolute;
+        }
+
+        @media (max-width: 375px) {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .post-announce-small-text-wrapper {
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-left: 0;
+          padding-top: 400px;
+        }
+      }
+    }
   }
 
   .articles > .alm-reveal:nth-child(1) > .post-announce-small:nth-child(1) {
@@ -456,6 +514,13 @@
     img {
       width: 720px;
       height: 500px;
+
+      @media (max-width: 768px) {
+        left: -15px;
+        width: calc(100% + 15px);
+        height: auto;
+        position: absolute;
+      }
     }
 
     .post-announce-small-text-wrapper {
@@ -463,6 +528,11 @@
       flex-direction: column;
       align-items: flex-start;
       margin-left: 70px;
+
+      @media (max-width: 768px) {
+        padding-top: 400px;
+        margin-left: 0;
+      }
 
       .post-link {
         font-family: Open Sans, sans-serif;
@@ -498,6 +568,10 @@
         margin-bottom: 0;
         padding-top: 27px;
         padding-bottom: 18px;
+
+        @media (max-width: 768px) {
+          color: $MainBlack;
+        }
       }
 
       .post-text {
@@ -509,6 +583,10 @@
         line-height: 30px;
         letter-spacing: 1px;
         color: $MainWhite;
+
+        @media (max-width: 768px) {
+          color: $MainBlack;
+        }
 
         p {
           margin: 0;

@@ -1,0 +1,11 @@
+.terms-section {
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 376px;
+  background-color: $MainWhite;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+}

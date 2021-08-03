@@ -14,7 +14,7 @@
       </div>
 
       <div class="get-in-touch-button-wrapper">
-        <button class="get_in_touch_button"><?php echo $get_in_touch_button_text ?></p></button> 
+        <button id="sendmail2" class="get_in_touch_button"><?php echo $get_in_touch_button_text ?></p></button> 
       </div>
 
     </div>

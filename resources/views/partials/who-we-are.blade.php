@@ -3,6 +3,8 @@
 <?php $who_we_are_image=get_field( "who_we_are_image" ); ?>
 <div class="who-we-are-section lines-fullwidth"> 
 
+  
+
   <div class="site-wrapper-boxed">
 
     <div class="who-we-are-wrapper" id="we">
