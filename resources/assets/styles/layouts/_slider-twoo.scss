@@ -3,16 +3,29 @@
   min-height: 772px;
   position: relative;
 
+  @media (max-width: 1386px) {
+    padding-bottom: 356px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 100px;
+  }
+
   .nav-twoo-wrapper {
     width: 235px;
     height: 24px;
     position: absolute;
-    top: 100px;
-    right: 14%;
+    top: 431px;
+    right: 29%;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     z-index: 150;
+
+    @media (max-width: 768px) {
+      top: 663px;
+      right: 8%;
+    }
 
     .progress-twoo {
       display: block;
@@ -115,13 +128,20 @@
 .slider-twoo-text {
   width: 498px;
   height: 378px;
-  position: absolute;
-  top: 226px;
-  left: 184px;
+  position: absolute !important;
+  top: 198px;
+  right: 20%;
   // border: 1px solid red;
   z-index: 120;
   color: $MainWhite;
   // overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 345px;
+    height: 200px;
+    top: 380px;
+    right: 1%;
+  }
 
   .slick-track {
     overflow: hidden;
@@ -153,6 +173,10 @@
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   .slick-list {
@@ -161,6 +185,11 @@
 
   .slick-slide {
     height: 378px !important;
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 200px;
+    }
   }
 }
 
@@ -173,4 +202,12 @@
   bottom: -88px;
   // border: 1px solid red;
   z-index: 110;
+
+  @media (max-width: 1386px) {
+    bottom: -111px;
+  }
+
+  @media (max-width: 768px) {
+    bottom: 120px;
+  }
 }

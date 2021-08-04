@@ -38,6 +38,10 @@
     height: auto;
   }
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   .slick-slide {
     @media (max-width: 971px) {
       width: calc(100% - 15px);
@@ -64,14 +68,29 @@
   color: $MainWhite;
   // overflow: hidden;
 
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 247px;
+    top: 54px;
+    left: 6%;
+  }
+
   .slider-three-text-title-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .slider-three-logotip {
     max-width: 85px;
     max-height: 24px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .slick-track {
@@ -118,6 +137,10 @@
     padding-left: 24px;
     padding-top: 24px;
     max-width: 500px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   .slick-list {
@@ -126,6 +149,10 @@
 
   .slick-slide {
     height: 378px !important;
+
+    @media (max-width: 768px) {
+      width: 85%;
+    }
   }
 }
 
@@ -139,6 +166,17 @@
   // border: 1px solid red;
   z-index: 120;
 
+  @media (max-width: 768px) {
+    width: calc(100% - 60px);
+    min-height: 320px;
+    padding: 15px;
+    background-color: #000;
+    position: absolute;
+    left: 15px;
+    bottom: -345px;
+    z-index: 120;
+  }
+
   .nav-three-wrapper {
     width: 266px;
     height: 92px;
@@ -150,6 +188,12 @@
     justify-content: space-around;
     z-index: 150;
     background-color: #ff6000;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      top: 350px;
+      right: 0;
+    }
 
     .progress-three {
       display: block;
@@ -194,7 +238,7 @@
 
     .three-arrow-prev {
       width: 20px;
-      height: 24px;
+      height: 12px;
       color: #c4c4c4;
       -ms-flex-order: 1;
       transition: color 0.3s ease-in-out;
@@ -203,7 +247,7 @@
 
     .three-arrow-next {
       width: 20px;
-      height: 24px;
+      height: 12px;
       color: #c4c4c4;
       -ms-flex-order: 5;
       transition: color 0.3s ease-in-out;

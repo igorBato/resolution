@@ -322,6 +322,7 @@
         flex-direction: column;
         align-items: flex-start;
         margin-left: 70px;
+        max-width: 360px;
 
         @media (max-width: 768px) {
           margin-right: 0;
@@ -416,6 +417,7 @@
         flex-direction: column;
         align-items: flex-start;
         margin-right: 70px;
+        max-width: 360px;
 
         @media (max-width: 768px) {
           margin-right: 0;
@@ -492,6 +494,8 @@
       }
 
       .post-announce-small-text-wrapper {
+        max-width: 360px;
+
         @media (max-width: 768px) {
           margin-right: 0;
           margin-left: 0;

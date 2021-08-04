@@ -5,6 +5,10 @@
   background-color: $DarkGreen;
   position: relative;
 
+  @media (max-width: 768px) {
+    padding-bottom: 100px;
+  }
+
   .black-plate {
     width: 39%;
     height: 100%;
@@ -34,6 +38,10 @@
 
     @media (max-width: 1420px) {
       right: 15px;
+    }
+
+    @media (max-width: 768px) {
+      top: 911px;
     }
 
     .square-dots-row {

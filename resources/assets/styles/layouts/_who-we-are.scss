@@ -13,6 +13,7 @@
 
   @media (max-width: 768px) {
     padding-top: 50px;
+    padding-bottom: 100px;
   }
 
   .who-we-are-wrapper {
@@ -37,6 +38,8 @@
         position: relative;
         z-index: 100;
         transition: font-size 0.3s ease-in-out;
+        margin-top: 0;
+        margin-bottom: 0;
 
         @media (max-width: 768px) {
           font-size: 52px;
@@ -47,7 +50,7 @@
 
     .who-we-are-text-wrapper {
       max-width: 471px;
-      padding-top: 70px;
+      padding-top: 54px;
 
       @media (max-width: 768px) {
         padding-top: 30px;
@@ -62,6 +65,7 @@
         letter-spacing: 1px;
         position: relative;
         z-index: 100;
+        margin-top: 0;
 
         @media (max-width: 768px) {
           font-size: 18px;
@@ -74,8 +78,8 @@
       width: 176px;
       height: 176px;
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: -100px;
+      right: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

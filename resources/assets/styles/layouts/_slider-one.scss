@@ -15,6 +15,10 @@
   justify-content: space-between;
   z-index: 150;
 
+  @media (max-width: 768px) {
+    top: 1129px;
+  }
+
   .progress-one {
     display: block;
     width: 121px;
@@ -95,6 +99,10 @@
   padding-top: 200px;
   height: 897px;
 
+  .slick-list {
+    padding-left: 100px !important;
+  }
+
   .slick-track {
     display: flex !important;
     align-items: center;
@@ -107,11 +115,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 0.9s;
     z-index: 110;
     padding-top: 142px;
     box-sizing: border-box;
     margin-right: 108px !important;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
 
     .category-image {
       width: 320px;
@@ -125,6 +139,8 @@
       width: 38px;
       height: 0;
       opacity: 0;
+      padding-top: 70px;
+      padding-bottom: 42px;
       transition: all ease-in-out 1s;
     }
 
@@ -145,20 +161,27 @@
     max-width: 545px !important;
     width: 545px !important;
     height: 897px !important;
-    // border: 1px solid red;
+    padding-left: 83px;
+    padding-right: 83px;
     position: relative;
     display: flex !important;
     flex-direction: column;
     background-color: $MainGreen2;
     z-index: 110;
     padding-top: 0 !important;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 0.9s;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    // transform: scale(1.1);
 
     .category-image {
       width: 497px;
       height: 300px;
       padding-top: 72px !important;
-      padding-left: 80px !important;
     }
 
     .category-icon {
@@ -169,7 +192,7 @@
 
     .category-link {
       font-size: 18px;
-      line-height: 18px;
+      line-height: 80px;
       letter-spacing: 1px;
     }
   }
