@@ -7,10 +7,9 @@
     <div class="get-in-touch-wrapper">
           
       <div class="get-in-touch-title-wrapper">  
-        <h3 class="get-in-touch-title"><?php 
-          $get_in_touch_title = explode(" ", $get_in_touch_title, 2);
-          echo '<span class="orange-text">' . $get_in_touch_title[0] . '</span> ' . $get_in_touch_title[1];
-        ?></h3>
+        <h3 class="get-in-touch-title">
+          <?php echo  $get_in_touch_title;?>
+        </h3>
       </div>
 
       <div class="get-in-touch-button-wrapper">

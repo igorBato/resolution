@@ -7,10 +7,8 @@
     <div class="get-in-touch-wrapper">
           
       <div class="get-in-touch-title-wrapper">  
-        <h3 class="get-in-touch-title"><?php 
-          $become_a_part_title = explode(" ", $become_a_part_title, 6);
-          echo  $become_a_part_title[0] ." " . $become_a_part_title[1] ." " . $become_a_part_title[2] ." " . $become_a_part_title[3] ." " .$become_a_part_title[4] ." " . '<span class="orange-text">' . $become_a_part_title[5] . '</span> ';
-        ?></h3>
+        <h3 class="get-in-touch-title"><?php echo  $become_a_part_title?>
+      </h3>
       </div>
 
       <div class="get-in-touch-button-wrapper">

@@ -10,10 +10,9 @@
     <div class="who-we-are-wrapper" id="we">
           
       <div class="who-we-are-title-wrapper">  
-        <h2 class="who-we-are-title"><?php 
-          $who_we_are_title = explode(" ", $who_we_are_title, 3);
-          echo $who_we_are_title[0] . "\n" .'<span class="orange-text">' . $who_we_are_title[1] . '</span> ' . $who_we_are_title[2];
-        ?></h2>
+        <h2 class="who-we-are-title">
+          <?php echo $who_we_are_title?>
+        </h2>
       </div>
 
       <div class="who-we-are-text-wrapper">

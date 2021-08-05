@@ -22,11 +22,12 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 1px;
-  right: 1px;
+  left: 0;
+  right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(to right, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent);
-  background-size: 19.9% 100%;
+  background-image: repeating-linear-gradient(90deg, #dbdbdb, #dbdbdb 1px, transparent 0, transparent);
+  background-size: 20% 100%;
+  border-right: 1px solid #dbdbdb;
 
   @media (max-width: 768px) {
     width: calc(100% - 30px);
@@ -200,5 +201,43 @@ body {
         margin-left: 0;
       }
     }
+  }
+}
+
+.zero-opacity {
+  opacity: 0;
+}
+
+.overflow-is-hidden {
+  overflow: hidden;
+}
+
+.animation-incoming-from-left {
+  animation: 1s slide-right;
+  animation-delay: 0;
+}
+
+.animation-opacity-incoming {
+  animation: 3s change-opacity;
+  animation-delay: 0;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -500px;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes change-opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
   }
 }

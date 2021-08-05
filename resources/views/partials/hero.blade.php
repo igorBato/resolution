@@ -11,9 +11,9 @@
     <div class="hero">
           
       <div class="hero-title-text">
-        <div class="hero-sub-title-wrapper">
-          <div class="orange-vertical-line"></div>
-          <h2 class="h2 hero-sub-title"><?php echo $hero_sub_title ?></h2>
+        <div class="hero-sub-title-wrapper overflow-is-hidden">
+          <div class="orange-vertical-line animation-incoming-from-left"></div>
+          <h2 class="h2 hero-sub-title animation-incoming-from-left"><?php echo $hero_sub_title ?></h2>
         </div>
         <h1 class="h1 hero-title"><?php echo $hero_title ?></h1>
       </div>

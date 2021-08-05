@@ -19,6 +19,10 @@
     top: 0;
     left: 0;
     background-color: $MainBlack;
+
+    @media (max-width: 768px) {
+      height: 728px;
+    }
   }
 
   .blog-navigation {
@@ -36,8 +40,10 @@
     color: $MainWhite;
     margin: 0;
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0.5px;
     }
   }
 
@@ -54,6 +60,10 @@
       letter-spacing: 1px;
       color: $MainWhite;
       display: inline-block;
+
+      @media (max-width: 400px) {
+        font-size: 20px;
+      }
     }
 
     .orange-vertical-line {
@@ -63,12 +73,16 @@
       width: 4px;
       margin-right: 17px;
       background-color: $MainOrange;
+
+      @media (max-width: 400px) {
+        margin-right: 14px;
+      }
     }
   }
 
   .navigation-line {
     display: flex;
-    margin-top: 67px;
+    margin-top: 44px;
     overflow-x: scroll;
 
     @media (max-width: 768px) {
@@ -93,7 +107,11 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin-bottom: 105px;
+      margin-bottom: 90px;
+
+      @media (max-width: 400px) {
+        margin-bottom: 43px;
+      }
 
       input {
         display: none;

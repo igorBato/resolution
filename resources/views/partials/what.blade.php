@@ -7,10 +7,9 @@
     <div class="what-wrapper" id="what">
           
       <div class="what-title-wrapper">  
-        <h2 class="what-title"><?php 
-          $what_title = explode(" ", $what_title, 2);
-          echo '<span class="orange-text">' . $what_title[0] . '</span> ' . $what_title[1];
-        ?></h2>
+        <h2 class="what-title">
+          <?php echo $what_title;?>
+        </h2>
       </div>
 
       <div class="what-text-wrapper">

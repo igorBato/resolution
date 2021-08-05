@@ -4,26 +4,31 @@ import 'slick-slider/slick/slick';
 export default {
   init() {
 // slider 1
-    $('.slider-one').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      fade: false,
-      dots: false,
-      variableWidth: true,
-      nextArrow: document.querySelector('.one-arrow-next'),
-      prevArrow: document.querySelector('.one-arrow-prev'),
-      responsive: [
-        {
-          breakpoint: 1230,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-          },
-        },
-      ],
-    });
+$('.slider-one').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: true,
+  nextArrow: document.querySelector('.one-arrow-next'),
+  prevArrow: document.querySelector('.one-arrow-prev'),
+  responsive: [
+    {
+      breakpoint: 1230,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+      },
+    },
+  ],
+});
 
 
     function setProgressOne(index) {
@@ -68,6 +73,14 @@ export default {
     }); 
     
     setProgressOne(0);
+
+  function getDotsForSliderOne(){
+    var dotsArr = $('.slick-slide:not(.slick-cloned)').find('.custom-slide').attr('data-category');
+    console.log(dotsArr);
+
+  }
+
+  getDotsForSliderOne();
     
 // slider 2
     $('.slider-twoo-image').slick({
@@ -201,6 +214,7 @@ export default {
       fade: false,
       dots: false,
       adaptiveHeight: true,
+      variableWidth: true,
       nextArrow: document.querySelector('.four-arrow-next'),
       prevArrow: document.querySelector('.four-arrow-prev'),
       responsive: [
@@ -223,7 +237,7 @@ export default {
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
           },
         },
@@ -293,6 +307,13 @@ export default {
       $('.hero-image').animate({top:'0', left:'0'}, 1000);
       $('.orange-plate').animate({top:'0', left:'0'}, 1000);
     };
+
+    window.onscroll = () => {
+      if ( $(window).scrollTop() > $('.what-title').offset().top - 600) {
+        console.log('!!!');
+        $('.what-title').addClass('animation-opacity-incoming');
+      }
+  };
     
   },
   finalize() {

@@ -4,6 +4,10 @@
   padding-top: 140px;
   padding-bottom: 150px;
 
+  @media (max-width: 400px) {
+    padding-top: 75px;
+  }
+
   .slider-four-title {
     font-family: Open Sans, sans-serif;
     font-style: normal;
@@ -19,6 +23,13 @@
       font-size: 52px;
       line-height: 60px;
     }
+
+    @media (max-width: 400px) {
+      font-size: 32px;
+      letter-spacing: 0;
+      padding-bottom: 56px;
+      font-weight: 600;
+    }
   }
 
   .nav-four-wrapper {
@@ -31,6 +42,12 @@
     align-items: baseline;
     justify-content: space-between;
     z-index: 150;
+
+    @media (max-width: 768px) {
+      bottom: -75px;
+      right: calc((100% - 235px) / 2);
+      top: auto;
+    }
 
     .progress-four {
       display: block;
@@ -45,6 +62,8 @@
       transition: background-size 0.4s ease-in-out;
       z-index: 110;
       -ms-flex-order: 3;
+      margin-left: 20px;
+      margin-right: 10px;
     }
 
     .four-prev {
@@ -58,6 +77,7 @@
       line-height: 24px;
       letter-spacing: 3.65503px;
       -ms-flex-order: 2;
+      cursor: default;
     }
 
     .four-next {
@@ -71,32 +91,38 @@
       line-height: 24px;
       letter-spacing: 3.65503px;
       -ms-flex-order: 4;
+      cursor: default;
     }
 
     .four-arrow-prev {
       width: 20px;
-      height: 24px;
+      height: 12px;
       color: #c4c4c4;
       -ms-flex-order: 1;
       transition: color 0.3s ease-in-out;
-      cursor: pointer;
+      cursor: default;
+      background-image: url(../images/arrow-grey.svg);
+      background-repeat: no-repeat;
     }
 
     .four-arrow-next {
       width: 20px;
-      height: 24px;
+      height: 12px;
       color: #c4c4c4;
       -ms-flex-order: 5;
       transition: color 0.3s ease-in-out;
-      cursor: pointer;
+      cursor: default;
+      background-image: url(../images/arrow-grey.svg);
+      background-repeat: no-repeat;
+      transform: scaleX(-1);
     }
 
     .four-arrow-prev:hover {
-      color: $MainOrange;
+      background-image: url(../images/arrow-orange.svg);
     }
 
     .four-arrow-next:hover {
-      color: $MainOrange;
+      background-image: url(../images/arrow-orange.svg);
     }
   }
 }
@@ -115,11 +141,13 @@
       max-height: 131px;
       object-fit: cover;
       filter: grayscale(100%);
+      margin: 0 15px;
     }
 
     &,
     img:hover {
       filter: grayscale(0);
+      margin: 0 15px;
     }
   }
 

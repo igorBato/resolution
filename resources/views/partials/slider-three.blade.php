@@ -6,10 +6,9 @@
   <div class="site-wrapper-boxed">
 
   <div class="how-we-do-title-wrapper" id="do">  
-        <h2 class="how-we-do-title"><?php 
-          $how_we_do_title = explode(" ", $how_we_do_title, 3);
-          echo $how_we_do_title[0] . "\n" . $how_we_do_title[1] . "\n" . '<span class="orange-text">'. $how_we_do_title[2] . '</span> ';
-        ?></h2>
+        <h2 class="how-we-do-title">
+          <?php echo $how_we_do_title?>
+        </h2>
       </div>
 
     <div class="slider-three-image" dir="rtl">
@@ -27,11 +26,11 @@
     <div class="black-plate-three-slider">
 
     <div class="nav-three-wrapper">
-      <div class="three-arrow-prev"><</div>
+      <div class="three-arrow-prev"></div>
       <div class="three-prev">01</div>
         <div class="progress-three" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
       <div class="three-next">02</div>
-      <div class="three-arrow-next">></div>
+      <div class="three-arrow-next"></div>
     </div>
 
       <div class="slider-three-text">

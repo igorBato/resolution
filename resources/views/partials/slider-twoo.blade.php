@@ -34,11 +34,11 @@
     </div>
 
     <div class="nav-twoo-wrapper">
-      <div class="twoo-arrow-prev"><</div>
+      <div class="twoo-arrow-prev"></div>
       <div class="twoo-prev">01</div>
         <div class="progress-twoo" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
       <div class="twoo-next">02</div>
-      <div class="twoo-arrow-next">></div>
+      <div class="twoo-arrow-next"></div>
     </div>
 
   </div>
