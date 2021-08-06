@@ -3,7 +3,7 @@
 .logotips-section {
   width: 100%;
   padding-top: 254px;
-  padding-bottom: 200px;
+  padding-bottom: 182px;
   background-color: $MainWhite;
   position: relative;
 
@@ -19,10 +19,11 @@
       justify-content: space-between;
       flex-wrap: wrap;
       min-width: 1200px;
+      padding-top: 13px;
 
       .logo-wrapper {
         flex-basis: 20%;
-        margin-top: 75px;
+        margin-top: 73px;
       }
     }
   }

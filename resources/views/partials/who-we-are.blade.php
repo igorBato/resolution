@@ -10,7 +10,7 @@
     <div class="who-we-are-wrapper" id="we">
           
       <div class="who-we-are-title-wrapper">  
-        <h2 class="who-we-are-title">
+        <h2 class="who-we-are-title element-animation">
           <?php echo $who_we_are_title?>
         </h2>
       </div>

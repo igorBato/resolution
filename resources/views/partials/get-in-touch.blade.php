@@ -13,7 +13,12 @@
       </div>
 
       <div class="get-in-touch-button-wrapper">
-        <button id="sendmail" class="get_in_touch_button"><?php echo $get_in_touch_button_text ?></p></button> 
+        <button id="sendmail" class="get_in_touch_button">
+        <?php echo $get_in_touch_button_text ?>
+        <img class="button-arrow"
+     src="<?php echo get_template_directory_uri() ?>/assets/images/button-arrow.svg"
+     alt="arrow">
+        </button> 
       </div>
 
 

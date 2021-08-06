@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 772px;
   position: relative;
-  padding-bottom: 115px;
+  padding-bottom: 138px;
   background-color: $MainGreen2;
 
   .articles-title-wrapper {
@@ -21,7 +21,7 @@
     font-weight: bold;
     font-size: 50px;
     line-height: 58px;
-    letter-spacing: 1.23642px;
+    letter-spacing: 0.5px;
     color: $MainBlack;
     position: relative;
     z-index: 110;
@@ -49,7 +49,7 @@
     display: flex;
     position: relative;
     z-index: 110;
-    margin-bottom: 100px;
+    margin-bottom: 68px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -151,7 +151,7 @@
     margin-left: auto;
     position: relative;
     z-index: 110;
-    margin-bottom: 100px;
+    margin-bottom: 78px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -178,7 +178,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-right: 70px;
+      margin-right: 121px;
       max-width: 360px;
 
       @media (max-width: 768px) {
@@ -540,6 +540,39 @@
         line-height: 18px !important;
         font-size: 18px !important;
         height: 60px !important;
+      }
+    }
+  }
+
+  .blog-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 42px;
+
+    a {
+      font-family: Open Sans, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 96px;
+      letter-spacing: 1px;
+      color: white;
+      text-decoration: none;
+      background-color: black;
+      padding-left: 62px;
+      padding-right: 64px;
+      position: relative;
+      z-index: 110;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+
+      a:hover {
+        opacity: 0.3;
+      }
+
+      .button-arrow {
+        padding-left: 23px;
       }
     }
   }

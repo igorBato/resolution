@@ -88,7 +88,9 @@ $('.slider-one').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      fade: false,
+      fade: true,
+      speed: 1000,
+      useTransform: true,
       asNavFor: '.slider-twoo-text',
     });
     $('.slider-twoo-text').slick({
@@ -97,6 +99,8 @@ $('.slider-one').slick({
       verticalSwiping: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: false,
+      speed: 1000,
       asNavFor: '.slider-twoo-image',
       nextArrow: document.querySelector('.twoo-arrow-next'),
       prevArrow: document.querySelector('.twoo-arrow-prev'),
@@ -120,12 +124,23 @@ $('.slider-one').slick({
 
     $slider2.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
       setProgressTwo(nextSlide);
+      $('.slider-twoo-image .slick-slide').addClass('animation-square');
+      $('.slider-twoo-image .slick-slide').removeClass('animation-scale');
+      $('.slider-twoo-image .slick-current').removeClass('animation-square');
+      $('.slider-twoo-image .slick-current').addClass('animation-scale');
+
+      $('.slider-twoo-text .slick-slide').removeClass('animation-opacity-incoming');
+      $('.slider-twoo-text .slick-current').addClass('animation-opacity-incoming');
     });
+
+    
     
     $slider2.on('afterChange', function(event, slick, currentSlide) {   
       // $oneNext.text(slick.slideCount);
       if(slick.slideCount<10){
         $onePrev2.text( '0' + (slick.currentSlide+1));
+        //  $('.slick-slide').removeClass('animation-square');
+        //  $('.slick-current').addClass('animation-square');
           if((currentSlide + 1) ==slick.slideCount){
               $oneNext2.text('01');
             }else{
@@ -133,6 +148,8 @@ $('.slider-one').slick({
             }
       }else{
         $onePrev2.text( slick.currentSlide + 1);
+              // $('.slick-slide').removeClass('animation-square');
+              // $('.slick-current').addClass('animation-square');
           if((currentSlide + 1) ==(slick.slideCount)){
             $oneNext2.text('1');
           }else{
@@ -147,7 +164,6 @@ $('.slider-one').slick({
 
 // slider 3
     $('.slider-three-image').slick({
-      // vertical: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -164,7 +180,6 @@ $('.slider-one').slick({
       asNavFor: '.slider-three-image',
       nextArrow: document.querySelector('.three-arrow-next'),
       prevArrow: document.querySelector('.three-arrow-prev'),
-      // dots: true,
     });
 
     function setProgressThree(index) {
@@ -308,12 +323,27 @@ $('.slider-one').slick({
       $('.orange-plate').animate({top:'0', left:'0'}, 1000);
     };
 
-    window.onscroll = () => {
-      if ( $(window).scrollTop() > $('.what-title').offset().top - 600) {
-        console.log('!!!');
-        $('.what-title').addClass('animation-opacity-incoming');
+  //   window.onscroll = () => {
+  //     if ( $(window).scrollTop() > $('.what-title').offset().top - 600) {
+  //       console.log('!!!');
+  //       $('.what-title').addClass('animation-opacity-incoming');
+  //     }
+  // };
+
+
+  function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('element-show');
       }
-  };
+    });
+  }
+  let options = { threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
     
   },
   finalize() {

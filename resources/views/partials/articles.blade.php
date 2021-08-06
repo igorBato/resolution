@@ -1,4 +1,6 @@
 <?php $articles_title=get_field( "articles_title" ); ?>
+<?php $blog_link_button_text=get_field( "blog_link_button_text" ); ?>
+<?php $blog_link=get_field( "blog_link" ); ?>
 
 <div class="articles-section lines-fullwidth"> 
 
@@ -55,27 +57,14 @@
                     <?php 
                     // wp_reset_postdata(); 
                     ?>
-{!! do_shortcode( '[ajax_load_more id="loadmore" loading_style="grey" container_type="div" css_classes="articles" posts_per_page="4" post_type="post" pause="true" scroll="false" button_label="More articles >"]' ); !!}
-        <!-- <div class="centered">
-                    <?php  if (  $q->max_num_pages > 1 ) : ?>
-                      <script>
-                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
-                        var true_posts = '<?php echo serialize($q->query_vars); ?>';
-                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-                        var max_pages = '<?php echo $q->max_num_pages; ?>';
-                      </script>
-                      <div class="opac-button-more" id="true_loadmore">
-                        <div class="button-plate-more">
-                          More articles >
-                        </div>
-                      </div>
-                    <?php endif; ?>
 
-            
-            
-            
-          </div> -->
-
+        <div class="blog-button-wrapper">
+          <a href="<?php echo $blog_link ?>" class="blog-link-button"><?php echo $blog_link_button_text ?>
+        <img class="button-arrow"
+     src="@asset('images/button-arrow.svg')"
+     alt="arrow"></a>
+        </div>
+      
     </div>
 
   </div>

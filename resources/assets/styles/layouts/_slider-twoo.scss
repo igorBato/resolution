@@ -15,8 +15,8 @@
     width: 235px;
     height: 24px;
     position: absolute;
-    top: 431px;
-    right: 29%;
+    top: 511px;
+    right: 21%;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -162,14 +162,12 @@
 
 .slider-twoo-text {
   width: 498px;
-  height: 378px;
+  height: 220px;
   position: absolute !important;
-  top: 198px;
-  right: 20%;
-  // border: 1px solid red;
+  top: 220px;
+  right: 19%;
   z-index: 120;
   color: $MainWhite;
-  // overflow: hidden;
 
   @media (max-width: 1450px) {
     top: 380px;
@@ -198,6 +196,8 @@
   }
 
   .slider-twoo-text-title-wrapper {
+    display: flex;
+    align-items: center;
     padding-bottom: 29px;
   }
 
@@ -206,7 +206,7 @@
     display: inline-block;
     height: 33px;
     width: 4px;
-    margin-right: 17px;
+    margin-right: 12px;
     background-color: $MainOrange;
   }
 
@@ -217,7 +217,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    letter-spacing: 1px;
+    letter-spacing: 0;
   }
 
   .slider-twoo-text-text {
@@ -227,6 +227,7 @@
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1px;
+    padding-left: 19px;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -240,7 +241,7 @@
   }
 
   .slick-slide {
-    height: 378px !important;
+    height: 220px !important;
 
     @media (max-width: 768px) {
       width: 307px;
@@ -255,7 +256,7 @@
   background-color: $MainBlack;
   position: absolute;
   right: 0;
-  bottom: -88px;
+  bottom: -60px;
   // border: 1px solid red;
   z-index: 110;
 

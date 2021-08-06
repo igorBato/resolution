@@ -7,7 +7,7 @@
     <div class="what-wrapper" id="what">
           
       <div class="what-title-wrapper">  
-        <h2 class="what-title">
+        <h2 class="what-title element-animation">
           <?php echo $what_title;?>
         </h2>
       </div>

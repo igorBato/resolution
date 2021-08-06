@@ -3,7 +3,7 @@
 .who-we-are-section {
   width: 100%;
   padding-top: 200px;
-  padding-bottom: 376px;
+  padding-bottom: 354px;
   background-color: $MainWhite;
   position: relative;
 
@@ -26,20 +26,21 @@
     }
 
     .who-we-are-title-wrapper {
-      max-width: 492px;
+      max-width: 515px;
 
       .who-we-are-title {
         font-family: Open Sans, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 82px;
-        line-height: 88px;
-        letter-spacing: 1.01786px;
+        line-height: 53px;
+        letter-spacing: -1px;
         position: relative;
         z-index: 100;
         transition: font-size 0.3s ease-in-out;
         margin-top: 0;
         margin-bottom: 0;
+        padding-bottom: 23px;
 
         @media (max-width: 768px) {
           font-size: 52px;

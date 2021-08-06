@@ -72,6 +72,10 @@ body {
   position: relative;
 }
 
+.padding-top-helper {
+  padding-top: 238px !important;
+}
+
 .orange-text {
   color: $MainOrange;
 }
@@ -204,6 +208,11 @@ body {
   }
 }
 
+.padding-slide-helper {
+  padding-top: 100px;
+  padding-right: 100px;
+}
+
 .zero-opacity {
   opacity: 0;
 }
@@ -212,13 +221,39 @@ body {
   overflow: hidden;
 }
 
+.element-animation {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s !important;
+  transform: translateY(0%);
+}
+
 .animation-incoming-from-left {
   animation: 1s slide-right;
   animation-delay: 0;
 }
 
 .animation-opacity-incoming {
-  animation: 3s change-opacity;
+  animation: 1.5s change-opacity;
+  animation-delay: 0;
+}
+
+.animation-square {
+  animation: 0.5s squ-animation;
+  animation-delay: 0;
+}
+
+.animation-clippath-text {
+  animation: 1s clippath-animation;
+  animation-delay: 0;
+}
+
+.animation-scale {
+  animation: 0.5s scale-animation;
   animation-delay: 0;
 }
 
@@ -233,11 +268,45 @@ body {
 }
 
 @keyframes change-opacity {
-  from {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  100% {
     opacity: 0;
+  }
+}
+
+@keyframes squ-animation {
+  from {
+    clip-path: inset(0 0 0 0);
   }
 
   to {
-    opacity: 100;
+    clip-path: inset(86% 88% 0 0);
+  }
+}
+
+@keyframes clippath-animation {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes scale-animation {
+  from {
+    transform: scale(1.5) translate(0);
+  }
+
+  to {
+    transform: scale(1) translate(0);
   }
 }
