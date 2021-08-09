@@ -15,7 +15,7 @@
           <div class="orange-vertical-line animation-incoming-from-left"></div>
           <h2 class="h2 hero-sub-title animation-incoming-from-left"><?php echo $hero_sub_title ?></h2>
         </div>
-        <h1 class="h1 hero-title animation-clippath-text element-animation"><?php echo $hero_title ?></h1>
+        <h1 class="h1 hero-title"><?php echo $hero_title ?></h1>
       </div>
 
       <div class="hero-image-wrapper">

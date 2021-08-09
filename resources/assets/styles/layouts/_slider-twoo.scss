@@ -145,6 +145,10 @@
     padding-bottom: 80vw;
   }
 
+  .slick-list {
+    background-color: $MainBlack;
+  }
+
   .slider-twoo-image-image {
     @media (max-width: 768px) {
       width: calc(100% - 15px);

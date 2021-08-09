@@ -134,9 +134,12 @@
       font-weight: bold;
       font-size: 82px;
       line-height: 88px;
-      letter-spacing: -1.2px;
+      letter-spacing: 3px;
       color: $MainBlack;
       margin-top: 29px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 515px;
 
       @media (max-width: 550px) {
         font-size: 52px;
@@ -146,6 +149,11 @@
       @media (max-width: 365px) {
         font-size: 40px;
         line-height: 40px;
+      }
+
+      span {
+        padding: 0 35px 0 0;
+        animation-play-state: paused;
       }
     }
   }

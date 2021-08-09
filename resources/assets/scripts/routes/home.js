@@ -344,6 +344,27 @@ $('.slider-one').slick({
   for (let elm of elements) {
     observer.observe(elm);
   }
+
+  // animate hero title text
+
+  var words = $('.hero-title').text().split(' ');
+$('.hero-title').empty();
+$.each(words, function(i, v) {
+    $('.hero-title').append($('<span class = "animation-clippath-text">').text(v));
+});
+
+
+
+(function() {
+  if ($('.hero-title span').length) {
+      $('.hero-title span').each(function(i, elem) {
+          setTimeout(function() {
+              elem.style.animationPlayState = 'running';
+          }, 500 + (100 * i));
+      });
+  }
+})();
+
     
   },
   finalize() {
