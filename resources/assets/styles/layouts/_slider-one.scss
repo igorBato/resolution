@@ -13,7 +13,7 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  z-index: 150;
+  z-index: 110;
 
   @media (max-width: 768px) {
     top: 1129px;
@@ -139,7 +139,7 @@
     width: 90%;
     list-style-type: none;
 
-    button {
+    li {
       font-family: Open Sans, sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -147,13 +147,15 @@
       line-height: 30px;
       border: none;
       background-color: transparent;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
     }
 
-    button[tabindex="-1"] {
-      color: #6a6a6a;
+    li:hover {
+      color: $MainOrange;
     }
 
-    button[tabindex="0"] {
+    .slick-active {
       color: $MainOrange;
     }
   }

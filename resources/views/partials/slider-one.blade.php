@@ -28,7 +28,7 @@
             $category_icon=get_field("category_icon", $category);
           @endphp
           <div class="custom-slide">
-            <img src="{{$category_image}}" class="category-image" alt="category">
+            <img src="{{$category_image}}" class="category-image" alt="{{$category->name}}">
            <div class = "image_wrapp">
             <img src="{{$category_icon}}" class="category-icon" alt="category icon">
            </div>

@@ -9,6 +9,10 @@ $('.slider-one').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   dots: true,
+  customPaging: function(slick,index) {
+    var targetSlideLink = slick.$slides.eq(index).find('img').attr('alt');
+    return '<span> ' + targetSlideLink + ' </span>';
+  }, 
   nextArrow: document.querySelector('.one-arrow-next'),
   prevArrow: document.querySelector('.one-arrow-prev'),
   responsive: [
