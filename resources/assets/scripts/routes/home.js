@@ -9,6 +9,7 @@ $('.slider-one').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   dots: true,
+  variableWidth: true,
   customPaging: function(slick,index) {
     var targetSlideLink = slick.$slides.eq(index).find('img').attr('alt');
     return '<span> ' + targetSlideLink + ' </span>';
@@ -88,7 +89,6 @@ $('.slider-one').slick({
     
 // slider 2
     $('.slider-twoo-image').slick({
-      // vertical: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
